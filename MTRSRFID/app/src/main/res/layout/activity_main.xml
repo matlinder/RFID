@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity"
+    android:layout_centerHorizontal="false"
+    android:layout_gravity="top">
+
+
+    <TextView
+        android:id="@+id/id_hello_nur"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/button_connect"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/bottom_button_spacer"
+                android:layout_marginEnd="@dimen/layout_wall_margin"
+                android:layout_marginStart="@dimen/layout_wall_margin"
+                android:layout_weight=".5"
+                android:background="@drawable/mybutton"
+                android:onClick="onConnectClick"
+                android:text="Connect" />
+
+            <ImageButton
+                android:id="@+id/imageButtonPower"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/button_height"
+                android:layout_marginBottom="@dimen/bottom_button_spacer"
+                android:layout_marginEnd="@dimen/layout_wall_margin"
+                android:layout_marginStart="@dimen/layout_wall_margin"
+                android:layout_weight=".5"
+                android:background="@drawable/mybutton"
+                android:onClick="onPowerOffClick"
+                app:srcCompat="@android:drawable/ic_lock_power_off" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:background="@android:color/white">
+
+            <Button
+                android:id="@+id/button_setup"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/layout_wall_margin"
+                android:layout_marginStart="@dimen/layout_wall_margin"
+                android:layout_weight=".5"
+                android:background="@drawable/mybutton"
+                android:text="---"
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="3dp" />
+
+            <Button
+                android:id="@+id/button_readerinfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/layout_wall_margin"
+                android:layout_marginStart="@dimen/layout_wall_margin"
+                android:layout_weight=".5"
+                android:background="@drawable/mybutton"
+                android:text="About..."
+                tools:layout_editor_absoluteX="5dp"
+                tools:layout_editor_absoluteY="3dp" />
+
+        </TableRow>
+
+        <TableRow>
+
+
+        </TableRow>
+
+    </TableLayout>
+    <LinearLayout
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:gravity="bottom"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/text_conn_status"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_weight="20"
+            android:background="@android:color/white"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="bottom|start"
+            android:text="Disconnected"
+            android:textAlignment="center"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="18dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
